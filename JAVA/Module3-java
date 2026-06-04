@@ -1,0 +1,288 @@
+1. Hello World Program
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+
+Output
+Hello, World!
+
+2. Simple Calculator
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        char op = sc.next().charAt(0);
+
+        switch(op) {
+            case '+':
+                System.out.println(a + b);
+                break;
+            case '-':
+                System.out.println(a - b);
+                break;
+            case '*':
+                System.out.println(a * b);
+                break;
+            case '/':
+                System.out.println(a / b);
+                break;
+            default:
+                System.out.println("Invalid Operator");
+        }
+    }
+}
+
+Input
+
+10
+5
++
+
+Output
+
+15.0
+
+3. Even or Odd Checker
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        if(n % 2 == 0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+    }
+}
+
+Input
+
+8
+
+Output
+
+Even
+
+4. Leap Year Checker
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int year = sc.nextInt();
+
+        if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+            System.out.println("Leap Year");
+        else
+            System.out.println("Not a Leap Year");
+    }
+}
+
+Input
+
+2024
+
+Output
+
+Leap Year
+
+5. Multiplication Table
+import java.util.Scanner;
+
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        for(int i = 1; i <= 10; i++) {
+            System.out.println(n + " x " + i + " = " + (n * i));
+        }
+    }
+}
+
+Input
+
+5
+
+Output
+
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+
+6. Data Type Demonstration
+public class DataTypes {
+    public static void main(String[] args) {
+
+        int a = 100;
+        float b = 10.5f;
+        double c = 99.99;
+        char d = 'A';
+        boolean e = true;
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+        System.out.println(e);
+    }
+}
+
+Output
+
+100
+10.5
+99.99
+A
+true
+
+7. Type Casting Example
+public class TypeCasting {
+    public static void main(String[] args) {
+
+        double d = 25.75;
+        int i = (int)d;
+
+        int n = 50;
+        double x = (double)n;
+
+        System.out.println(i);
+        System.out.println(x);
+    }
+}
+
+Output
+
+25
+50.0
+
+8. Operator Precedence
+public class OperatorPrecedence {
+    public static void main(String[] args) {
+
+        int result1 = 10 + 5 * 2;
+        int result2 = (10 + 5) * 2;
+
+        System.out.println(result1);
+        System.out.println(result2);
+    }
+}
+
+Output
+
+20
+30
+9. Grade Calculator
+import java.util.Scanner;
+
+public class GradeCalculator {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int marks = sc.nextInt();
+
+        if(marks >= 90)
+            System.out.println("A");
+        else if(marks >= 80)
+            System.out.println("B");
+        else if(marks >= 70)
+            System.out.println("C");
+        else if(marks >= 60)
+            System.out.println("D");
+        else
+            System.out.println("F");
+    }
+}
+
+Input
+
+85
+
+Output
+
+B
+10. Number Guessing Game
+import java.util.Scanner;
+import java.util.Random;
+
+public class GuessNumber {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        Random r = new Random();
+
+        int number = r.nextInt(100) + 1;
+        int guess;
+
+        do {
+            guess = sc.nextInt();
+
+            if(guess > number)
+                System.out.println("Too High");
+            else if(guess < number)
+                System.out.println("Too Low");
+            else
+                System.out.println("Correct");
+        } while(guess != number);
+    }
+}
+
+Input
+
+50
+75
+63
+60
+
+Output
+
+Too Low
+Too High
+Too High
+Correct
+11. Factorial Calculator
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        long fact = 1;
+
+        for(int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+
+        System.out.println(fact);
+    }
+}
+
+Input
+
+5
+
+Output
+
+120
